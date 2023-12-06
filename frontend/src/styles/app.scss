@@ -1,0 +1,62 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  @import "features";
+  @import "header";
+  @import "login";
+  @import "profile";
+
+
+
+
+  a {
+    text-decoration: none;
+    color: $color3;
+  }
+  .todosContainer {
+    @include flexBox(column, center, flex-start);
+    @include fill;
+    @include container(900px, unset, 3rem 0);
+  }
+  .todo {
+    background-color: $color2;
+    border-radius: 5px;
+  
+    @include flexBox(row, center, space-between);
+    width: 100%;
+    padding: 2rem;
+    > div:last-of-type {
+      @include flexBox(row);
+    }
+  
+    input {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .loader {
+    @include defaultStyle;
+    @include flexBox(column, center, center);
+    @include styledText(2rem, 100, uppercase);
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  
+  .btn {
+    @include styledText;
+    @include myButton;
+  }
+  
+  .container {
+    @include defaultStyle;
+    padding: 5rem 2rem;
+    background-color: $color4;
+  }
+
